@@ -33,16 +33,16 @@ jobs:
 
             - name: Lint with flake8
               run: |
-                  flake8 malanka tests
+                  flake8 {{cookiecutter.project_slug}} tests
 
             - name: Lint with mypy
               run: |
-                  mypy malanka/
+                  mypy {{cookiecutter.project_slug}}/
 
             - name: Lint with black
               run: |
-                  black --check malanka tests
+                  black --check {{cookiecutter.project_slug}} tests
 
             - name: Test with pytest
               run: |
-                  pytest --no-cov-on-fail --cov malanka --cov tests
+                  pytest --no-cov-on-fail --cov {{cookiecutter.project_slug}} --cov tests
