@@ -36,9 +36,9 @@ Then:
 
 If you want to release a package do:
 
--   bump a package version in `pyproject.toml`: `poetry version 1.0.0`
+-   bump a package version in `pyproject.toml` `poetry version 1.0.0`
 -   commit changes `git add pyproject.toml` and `git commit pyproject.toml`
--   tag the release `git tag v1.0.0
+-   tag the release `git tag v1.0.0`
 -   push changes `git push && git push --tags`
 -   create a new [Github release](https://docs.github.com/en/github/administering-a-repository/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release)
 
