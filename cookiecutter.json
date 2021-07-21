@@ -1,0 +1,9 @@
+{
+    "full_name": "Alex Oleshkevich",
+    "email": "alex.oleshkevich@gmail.com",
+    "github_username": "alex-oleshkevich",
+    "project_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "project_description": "Package Boilerplate",
+    "version": "0.1.0"
+}
