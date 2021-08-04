@@ -10,7 +10,7 @@ repository = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter
 documentation = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
 keywords = []
 classifiers = [
-    "Development Status :: 1 - Planning",
+    "Development Status :: 5 - Production/Stable",
     "Environment :: Web Environment",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
