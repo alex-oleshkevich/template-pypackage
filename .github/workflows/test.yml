@@ -11,39 +11,40 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                python: [3.9, 3.10]
+                python: ['3.9', '3.10']
 
         steps:
-            - uses: actions/checkout@v1
+            - uses: actions/checkout@v2
 
-            - name: Set up Python ${{ matrix.python }}
-              uses: actions/setup-python@v1
+            - name: Cache poetry
+              uses: actions/cache@v2
               with:
-                  python-version: ${{ matrix.python }}
+                  path: |
+                      ~/.cache/pypoetry
+                      ~/.cache/pip
+                  key: ${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+            - name: Set up Python ${{ matrix.python-version }}
+              uses: actions/setup-python@v2
+              with:
+                  python-version: ${{ matrix.python-version }}
 
             - name: Install Poetry
               run: |
                   python -m pip install --upgrade pip
                   pip install poetry
+                  poetry install --no-interaction
 
-            - name: Install python packages
-              run: |
-                  poetry install
-
-            # here's the important bit!
-            # generate a new project using the cookiecutter template
-            # use the default values in cookiecutter.json with --no-input
-            # if the directory already exists, overwrite it
-            - name: Generate package using cookiecutter
+            - name: Generate package
               run: |
                   poetry run cookiecutter . --overwrite-if-exists --no-input
-            # now inside the generated project, install dependencies and run tests
-            - name: Install python packages (in cookiecutter dir)
-              working-directory: example_cli
+
+            - name: Install python packages (in the package directory)
+              working-directory: package_boilerplate
               run: |
                   poetry install
 
-            - name: Run tests (in cookiecutter dir)
-              working-directory: example_cli
+            - name: Run tests (in the package directory)
+              working-directory: package_boilerplate
               run: |
-                  poetry run task tests
+                  poetry run pytest
