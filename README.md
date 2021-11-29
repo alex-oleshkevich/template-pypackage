@@ -1,4 +1,4 @@
-[Cookiecutter](https://github.com/cookiecutter/cookiecutter) template for a Python package.  
+[Cookiecutter](https://github.com/cookiecutter/cookiecutter) template for a Python package.
 Based on [audreyfeldroy/cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage).
 
 ## Features
