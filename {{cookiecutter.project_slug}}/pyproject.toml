@@ -88,8 +88,7 @@ exclude_lines = [
 [tool.mypy]
 disallow_untyped_defs = true
 ignore_missing_imports = true
-files = ["{{cookiecutter.project_slug}}", "tests"]
-exclude = "^tests/"
+files = ["{{cookiecutter.project_slug}}", "examples", "tests"]
 
 [tool.pytest.ini_options]
 minversion =  "6.0"
