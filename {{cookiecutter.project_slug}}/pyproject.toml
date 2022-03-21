@@ -3,7 +3,7 @@ name = "{{cookiecutter.project_slug}}"
 description = "{{cookiecutter.project_short_description}}"
 version = "{{cookiecutter.version}}"
 authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
-license = "MIT"
+license = "{{license}}"
 readme = "README.md"
 homepage = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
 repository = "https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}"
@@ -13,25 +13,24 @@ classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Web Environment",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: {{license}} License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: {{minimal_python_version}}",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Typing :: Typed",
 ]
 
 [tool.poetry.dependencies]
-python = "^3.7.0"
+python = "^{{minimal_python_version}}.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.2.5"
-pytest-asyncio = "^0.16.0"
-requests = "^2.26.0"
+pytest = "^7.1.0"
+pytest-asyncio = "^0.18.0"
 pytest-cov = "^3.0"
-black = "^21.11b1"
-mypy = "^0.910"
+black = "^22.1.0"
+mypy = "^0.941"
 flake8 = "^4.0.1"
 
 [build-system]
@@ -39,7 +38,7 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.black]
-target-version = ["py39"]
+target-version = ["py{{minimal_python_version.replace('.', '')}}"]
 skip-string-normalization = true
 line_length = 120
 extend-exclude = true
@@ -91,7 +90,7 @@ ignore_missing_imports = true
 files = ["{{cookiecutter.project_slug}}", "examples", "tests"]
 
 [tool.pytest.ini_options]
-minversion =  "6.0"
+minversion =  "7.1"
 python_files = ["tests.py", "test_*.py", "*_tests.py"]
 norecursedirs = [
     "node_modules", "frontend", "storage", "dist", ".git",
