@@ -25,4 +25,4 @@ poetry add {{cookiecutter.project_slug}}
 
 ## Quick start
 
-See example application in `examples/` directory of this repository.
+See example application in [examples/](examples/) directory of this repository.
