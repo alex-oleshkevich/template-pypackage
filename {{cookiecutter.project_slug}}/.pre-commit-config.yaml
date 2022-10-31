@@ -11,7 +11,6 @@ repos:
           - id: trailing-whitespace
           - id: end-of-file-fixer
           - id: detect-private-key
-          - id: detect-aws-credentials
           - id: fix-byte-order-marker
           - id: check-yaml
           - id: check-json
@@ -31,7 +30,7 @@ repos:
             name: isort (python)
 
     - repo: https://github.com/psf/black.git
-      rev: 22.1.0
+      rev: 22.10.0
       hooks:
           - id: black
             language_version: python{{cookiecutter.minimal_python_version}}
@@ -55,10 +54,10 @@ repos:
             files: "{{cookiecutter.project_slug}}"
 
     -   repo: https://github.com/myint/docformatter.git
-        rev: v1.4
+        rev: v1.5.0
         hooks:
             -   id: docformatter
-                args: [ '--in-place', '--wrap-summaries=80', '--wrap-descriptions=80', '--pre-summary-newline' ]
+                args: [ '--in-place', '--wrap-summaries=120', '--wrap-descriptions=120', '--pre-summary-newline' ]
 
 
     - repo: local
