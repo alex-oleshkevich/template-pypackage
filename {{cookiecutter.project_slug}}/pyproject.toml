@@ -26,9 +26,9 @@ classifiers = [
 python = "^{{cookiecutter.minimal_python_version}}.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^7.1.0"
-pytest-asyncio = "^0.18.0"
-pytest-cov = "^3.0"
+pytest = "^7.2.0"
+pytest-asyncio = "^0.20.1"
+pytest-cov = "^0.0"
 black = "^22.10.0"
 mypy = "^0.982"
 flake8 = "^5.0.4"
@@ -90,7 +90,7 @@ ignore_missing_imports = true
 files = ["{{cookiecutter.project_slug}}", "examples", "tests"]
 
 [tool.pytest.ini_options]
-minversion =  "7.1"
+minversion =  "7.2"
 python_files = ["tests.py", "test_*.py", "*_tests.py"]
 norecursedirs = [
     "node_modules", "frontend", "storage", "dist", ".git",

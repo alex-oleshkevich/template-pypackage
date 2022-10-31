@@ -51,7 +51,9 @@ repos:
       rev: 'v0.941'
       hooks:
           - id: mypy
-            files: "{{cookiecutter.project_slug}}"
+            always_run: true
+            pass_filenames: false
+            args: [ --config-file=pyproject.toml ]
 
     -   repo: https://github.com/myint/docformatter.git
         rev: v1.5.0
