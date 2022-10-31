@@ -39,7 +39,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 target-version = ["py{{cookiecutter.minimal_python_version.replace('.', '')}}"]
-skip-string-normalization = true
 line_length = 120
 extend-exclude = true
 exclude = '''
@@ -88,6 +87,11 @@ exclude_lines = [
 disallow_untyped_defs = true
 ignore_missing_imports = true
 files = ["{{cookiecutter.project_slug}}", "examples", "tests"]
+pretty = true
+strict = true
+show_error_context = true
+show_column_numbers = true
+show_error_codes = true
 
 [tool.pytest.ini_options]
 minversion =  "7.2"

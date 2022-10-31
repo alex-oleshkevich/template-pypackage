@@ -8,7 +8,6 @@
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/pypi/{{ cookiecutter.project_slug }})
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/{{ cookiecutter.project_slug }})
 ![GitHub Release Date](https://img.shields.io/github/release-date/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }})
-![Lines of code](https://img.shields.io/tokei/lines/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }})
 
 ## Installation
 
@@ -26,4 +25,4 @@ poetry add {{cookiecutter.project_slug}}
 
 ## Quick start
 
-See example application in `examples/` directory of this repository.
+See example application in [examples/](examples/) directory of this repository.
