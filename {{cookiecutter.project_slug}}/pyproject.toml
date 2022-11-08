@@ -28,7 +28,7 @@ python = "^{{cookiecutter.minimal_python_version}}.0"
 starlette = "^0.21.0"
 {% endif %}
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = "^7.2"
 pytest-asyncio = "^0.20"
 pytest-cov = "^0"

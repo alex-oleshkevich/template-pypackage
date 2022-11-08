@@ -41,7 +41,7 @@ jobs:
             - name: Install python packages (in the package directory)
               working-directory: package_boilerplate
               run: |
-                  poetry install --no-interaction
+                  poetry install --no-interaction --with dev
 
             - name: Run tests (in the package directory)
               working-directory: package_boilerplate
