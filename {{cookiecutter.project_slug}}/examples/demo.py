@@ -1,5 +1,6 @@
 from pathlib import Path
 
+from starception import install_error_handler
 from starlette.applications import Starlette
 from starlette.requests import Request
 from starlette.responses import Response
@@ -15,6 +16,7 @@ def index_view(request: Request) -> Response:
     return templates.TemplateResponse('index.html', {'request': request})
 
 
+install_error_handler()
 app = Starlette(
     debug=True,
     routes=[
