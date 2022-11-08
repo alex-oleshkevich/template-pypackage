@@ -15,7 +15,6 @@ repos:
           - id: fix-byte-order-marker
           - id: check-yaml
           - id: check-json
-          - id: check-toml
           - id: check-xml
           - id: check-symlinks
           - id: check-case-conflict

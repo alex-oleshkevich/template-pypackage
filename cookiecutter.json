@@ -1,11 +1,18 @@
 {
+    "type": [
+        "python",
+        "starlette"
+    ],
     "full_name": "Alex Oleshkevich",
     "email": "alex.oleshkevich@gmail.com",
     "github_username": "alex-oleshkevich",
-    "project_name": "Package Boilerplate",
+    "project_name": "{% if cookiecutter.type == 'starlette' %}Starlette Plugin{% else %}Package Boilerplate{% endif %}",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
     "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
     "version": "0.1.0",
     "minimal_python_version": "3.9",
-    "license": "MIT"
+    "license": "MIT",
+    "_copy_without_render": [
+        "*.html"
+    ]
 }
