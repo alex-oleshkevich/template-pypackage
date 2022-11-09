@@ -14,3 +14,5 @@ for path in REMOVE_PATHS:
             shutil.rmtree(path)
         else:
             os.unlink(path)
+
+os.rename('.gitignore.template', '.gitignore')
