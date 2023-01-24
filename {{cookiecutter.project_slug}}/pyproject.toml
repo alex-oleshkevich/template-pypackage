@@ -82,7 +82,6 @@ profile = "black"
 use_parentheses = true
 
 [tool.coverage.run]
-branch = true
 source = ["{{cookiecutter.project_slug}}"]
 omit = ["tests/*", ".venv/*", ".git/*",  "*/__main__.py"]
 
