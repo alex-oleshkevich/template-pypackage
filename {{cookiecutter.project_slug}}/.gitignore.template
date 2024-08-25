@@ -8,3 +8,5 @@ dist/
 var/
 build/
 /coverage.xml
+.env
+.envrc
