@@ -5,3 +5,6 @@ __pycache__
 .coverage
 .idea
 dist/
+var/
+build/
+/coverage.xml
